@@ -1,0 +1,39 @@
+
+    Elabora un programa en el cual el usuario debe adivinar un número entre 1 y 100. 
+
+    El número es generado aleatoriamente por el programa. El programa solo le dará 5 intentos al usuario para adivinar. 
+    Al final de los 5 intentos, el programa deberá mostrar el mensaje "PERDISTE" y mostrará cuál era el número correcto.
+    Si el usuario adivina en alguno de los 5 intentos, el programa debe mostrar el mensaje "GANASTE" y mostrará cuál es el número.
+    MOISES MEDINA PORRAS
+
+Inicio
+    función random(desde, hasta) que retorne un número aleatorio entre "desde" y "hasta"
+        Dentro de la función:
+            Generar el número aleatorio usando la fórmula: rand() % hasta + desde
+            Retornar el número aleatorio
+
+    Iniciar generador de números aleatorios con la semilla basada en el tiempo actual (srand(time(0)))
+
+    numeroAleatorio <- Llamar a random(1, 100) para generar un número entre 1 y 100
+
+    numeroDigitado <- 0  
+
+    int intentos <- 0  
+
+    Repetir
+        Escribir "Digita un número para adivinarlo: "
+        Leer numeroDigitado
+        
+        Si numeroDigitado = numeroAleatorio Entonces
+            Escribir "GANASTE"
+            Escribir "El número aleatorio es: ", numeroAleatorio
+            Salir del bucle
+        Sino
+            Escribir "El número no es el correcto, intenta otra vez."
+        FinSi
+        
+        intentos ← intentos + 1
+
+    Hasta que intentos = 5
+
+Fin

@@ -1,0 +1,13 @@
+/*
+    Elabora un programa que reciba un número e imprima la tabla de multiplicar de ese número del 2 al 10.
+    MOISES MEDINA PORRAS
+*/
+
+Inicio
+    Escribir "Digita el número para mostrar su tabla de multiplicar: "
+    Leer numeroTabla
+
+    Para i desde 2 hasta 10 hacer
+        Escribir numeroTabla, " x ", i, " = ", numeroTabla * i
+    FinPara
+Fin

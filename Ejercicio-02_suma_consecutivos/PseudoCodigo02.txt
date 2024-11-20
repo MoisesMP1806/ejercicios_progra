@@ -1,0 +1,28 @@
+
+    Elabora un programa que reciba un número entre 1 y 50 
+    y devuelva la suma de los números
+     consecutivos del 1 hasta ese número.
+
+    MOISES MEDINA PORRAS
+
+Inicio
+    dentroRango ← Falso
+    sumaNumeros ← 0
+
+    Repetir
+        Escribir "Por favor, ingresa un número entero entre el 1 y el 50: "
+        Leer numeroRecibir
+
+        Si numeroRecibir >= 1 y numeroRecibir <= 50 Entonces
+            dentroRango ← Verdadero
+        Sino
+            dentroRango ← Falso
+        FinSi
+    Hasta que dentroRango sea Verdadero
+
+    Para i desde 0 hasta numeroRecibir hacer
+        sumaNumeros ← sumaNumeros + i
+    FinPara
+
+    Escribir sumaNumeros
+Fin

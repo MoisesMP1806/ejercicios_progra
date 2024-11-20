@@ -1,0 +1,11 @@
+
+    Elabora un programa que imprima los números pares del 0 al 100.
+    MOISES MEDINA PORRAS
+
+Inicio
+    Para i desde 0 hasta 100 hacer
+        Si i módulo 2 es igual a 0 Entonces
+            Imprimir i
+        FinSi
+    FinPara
+Fin

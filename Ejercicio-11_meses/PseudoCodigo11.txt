@@ -1,0 +1,36 @@
+
+    Problema: Elabora un programa que reciba un número entero entre 0 y 11, 
+    debe devolver el nombre de mes correspondiente. Toma en cuenta que 0 = Enero y 11 = Diciembre.
+
+    MOISES MEDINA PORRAS
+
+Inicio
+    Crear diccionarioMes como un mapa de entero a cadena de texto
+    Asignar valores al diccionarioMes:
+        0 -> "Enero"
+        1 -> "Febrero"
+        2 -> "Marzo"
+        3 -> "Abril"
+        4 -> "Mayo"
+        5 -> "Junio"
+        6 -> "Julio"
+        7 -> "Agosto"
+        8 -> "Septiembre"
+        9 -> "Octubre"
+        10 -> "Noviembre"
+        11 -> "Diciembre"
+
+    numeroValido <- Falso
+
+    Repetir
+        Escribir "Digita un número entre el 0 y el 11: "
+        Leer numeroMes
+
+        Si numeroMes <= 11 Entonces
+            numeroValido <- Verdadero
+            Escribir diccionarioMes[numeroMes]
+        Sino
+            numeroValido <- Falso
+        FinSi
+    Hasta que numeroValido sea Verdadero
+Fin

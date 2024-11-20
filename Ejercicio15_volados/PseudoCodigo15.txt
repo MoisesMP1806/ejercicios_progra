@@ -1,0 +1,62 @@
+
+     Elabora un programa que juegue volados con el usuario. El juego tendrá 3 rondas.
+Al inicio de cada ronda, la computadora realiza una apuesta aleatoria entre $20 y $100. Después el usuario deberá realizar su apuesta también con un límite entre $20 y $100.
+A continuación, el jugador deberá elegir AGUILA o SOL. El programa lanza el volado e imprime el resultado (AGUILA o SOL) el jugador gana si adivinó el resultado, en caso contrario gana el CPU.
+El ganador se lleva la cantidad de dinero que haya apostado su rival y este restará de su bolsa el dinero que perdió. Tanto el jugador como el CPU empiezan con una bolsa de $500.
+
+MOISES MEDINA PORRAS
+
+iniciar
+    bolsa_jugador = 500
+    bolsa_cpu = 500
+
+    para ronda desde 1 hasta 3 hacer
+        imprimir "ronda [ronda]:"
+        
+        apuesta_cpu = generar_número_aleatorio(20, 100)
+        hacer
+            imprimir "tu bolsa actual es: [bolsa_jugador]"
+            imprimir "apuesta entre $20 y $100: "
+            leer apuesta_jugador
+        mientras apuesta_jugador < 20 o apuesta_jugador > 100 o apuesta_jugador > bolsa_jugador
+        
+        volado = generar_número_aleatorio(0, 1)
+        resultado_volado = "sol" si volado = 0 sino "aguila"
+        
+        hacer
+            imprimir "elige aguila o sol: "
+            leer eleccion_jugador
+            convertir eleccion_jugador a mayúsculas
+        mientras eleccion_jugador no es "aguila" y no es "sol"
+        
+        imprimir "la computadora apostó: [apuesta_cpu]"
+        imprimir "el volado salió: [resultado_volado]"
+
+        si eleccion_jugador es igual a resultado_volado entonces
+            imprimir "¡ganaste la ronda!"
+            bolsa_jugador = bolsa_jugador + apuesta_cpu
+            bolsa_cpu = bolsa_cpu - apuesta_cpu
+        sino
+            imprimir "perdiste la ronda."
+            bolsa_jugador = bolsa_jugador - apuesta_jugador
+            bolsa_cpu = bolsa_cpu + apuesta_jugador
+        
+        si bolsa_jugador <= 0 entonces
+            imprimir "te quedaste sin dinero. ¡el juego ha terminado!"
+            salir
+        sino si bolsa_cpu <= 0 entonces
+            imprimir "la computadora se quedó sin dinero. ¡el juego ha terminado!"
+            salir
+        
+        imprimir "tu bolsa actual es: [bolsa_jugador]"
+        imprimir "la bolsa de la computadora es: [bolsa_cpu]"
+        imprimir "-----------------------------"
+    fin para
+
+    si bolsa_jugador > bolsa_cpu entonces
+        imprimir "¡felicidades, ganaste el juego!"
+    sino si bolsa_jugador < bolsa_cpu entonces
+        imprimir "la computadora ganó el juego."
+    sino
+        imprimir "el juego terminó en empate."
+fin

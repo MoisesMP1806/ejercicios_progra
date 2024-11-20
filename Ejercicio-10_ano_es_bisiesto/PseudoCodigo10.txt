@@ -1,0 +1,23 @@
+
+    Elabora un programa o una función que reciba un número entero que 
+    represente un año y devuelva verdadero si el año es bisiesto.
+    MOISES MEDINA PORRAS
+
+Inicio
+    Escribir "Digita el año a verificar si es bisiesto: "
+    Leer anio
+
+    Si bisiesto(anio) Entonces
+        Escribir "El año es bisiesto"
+    Sino
+        Escribir "El año no es bisiesto"
+    FinSi
+Fin
+
+Función bisiesto(anio) Retorna Booleano
+    Si (anio % 100 == 0) Y (anio % 4 == 0) Y (anio % 400 == 0) Entonces
+        Retornar Verdadero
+    Sino
+        Retornar Falso
+    FinSi
+FinFunción

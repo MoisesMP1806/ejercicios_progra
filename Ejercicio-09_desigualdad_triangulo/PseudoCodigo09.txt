@@ -1,0 +1,18 @@
+teorema de la desigualdad de un triángulo. Si tenemos tres segmentos de cualquier longitud, no siempre se puede construir un triángulo con ellos. 
+Elabora un programa que reciba la longitud de 3 segmentos y determine si con ellos es posible formar un triángulo.
+MOISES MEDINA PORRAS
+
+Inicio
+    Escribir "Digita la longitud A, B, C separadas por un espacio: "
+    Leer longitudA, longitudB, longitudC
+
+    Si verificar_triangulo(longitudA, longitudB, longitudC) Entonces
+        Escribir "Los lados pueden formar un triángulo"
+    Sino
+        Escribir "Los lados no pueden formar un triángulo"
+    FinSi
+Fin
+
+Función verificar_triangulo(a, b, c) Retorna Booleano
+    Retornar (a + b > c) Y (a + c > b) Y (b + c > a)
+FinFunción

@@ -1,0 +1,18 @@
+
+    Elabora un programa que calcule el perímetro de un triángulo escaleno. 
+    El programa pedirá al usuario las entradas necesarias.
+    MOISES MEDINA PORRAS
+
+Inicio
+    ladoA ← 0
+    ladoB ← 0
+    ladoC ← 0
+    perimetro ← 0
+
+    Escribir "Ingresa la longitud del lado A, B, C separados por un espacio: "
+    Leer ladoA, ladoB, ladoC
+
+    perimetro ← ladoA + ladoB + ladoC
+
+    Escribir "El perímetro del triángulo escaleno es: ", perimetro
+Fin

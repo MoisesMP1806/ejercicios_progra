@@ -1,0 +1,18 @@
+
+    Escribe un programa que imprima los números del 1 al 100, pero aplicando las siguientes reglas.
+    Regla 1: Cuando el número sea divisible entre 3, en vez del número debe escribir "ping"
+    Regla 2: Cuando el número sea divisible entre 5, en vez del número debe escribir "pong"
+    Regla 3: Cuando el número sea divisible entre 3 y también divisible entre 5, en vez del número debe escribir "ping-pong"
+
+    MOISES MEDINA PORRAS
+
+Inicio
+    Para i desde 1 hasta 100 hacer
+        Si i es divisible entre 3 y entre 5
+            Imprimir "ping-pong"
+        Sino, si i es divisible entre 3
+            Imprimir "ping"
+        Sino, si i es divisible entre 5
+            Imprimir "pong"
+    Fin Para
+Fin

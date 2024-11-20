@@ -1,0 +1,16 @@
+
+    Elabora un programa que calcule el perímetro de un triángulo equilátero. 
+    El programa deberá pedir al usuario las entradas necesarias.
+    MOISES MEDINA PORRAS
+
+Inicio
+    ladoTriangulo ← 0
+    perimetro ← 0
+
+    Escribir "Digita la longitud de uno de los lados del triángulo: "
+    Leer ladoTriangulo
+
+    perimetro ← ladoTriangulo * 3
+
+    Escribir "El perímetro del triángulo es ", perimetro
+Fin

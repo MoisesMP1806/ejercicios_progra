@@ -1,0 +1,20 @@
+
+    Elabora un programa que calcule el perímetro de un triángulo isósceles. 
+    El programa pedirá al usuario las entradas necesarias.
+    MOISES MEDINA PORRAS
+
+Inicio
+    baseTriangulo ← 0
+    ladoTriangulo ← 0
+    perimetroTriangulo ← 0
+
+    Escribir "Digita la longitud de la base del triángulo: "
+    Leer baseTriangulo
+
+    Escribir "Digita la longitud de uno de los lados: "
+    Leer ladoTriangulo
+
+    perimetroTriangulo ← (2 * ladoTriangulo) + baseTriangulo
+
+    Escribir "El perímetro del triángulo es: ", perimetroTriangulo
+Fin

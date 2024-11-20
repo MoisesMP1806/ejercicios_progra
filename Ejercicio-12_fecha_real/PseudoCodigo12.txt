@@ -1,0 +1,76 @@
+
+    labora un programa o una función que reciba un día, mes y año y devuelva verdadero si la fecha es real y falso si la fecha es irreal. 
+    Un ejemplo de fecha irreal es 30 de febrero o 31 de abril o 29 de febrero de 2021.
+    MOISES MEDINA PORRAS
+
+Inicio
+    Definir funcion esBisiesto(anio)
+        Si (anio mod 4 = 0 Y anio mod 100 ≠ 0) O (anio mod 400 = 0)
+            Retornar Verdadero
+        Sino
+            Retornar Falso
+    Fin
+
+    Definir funcion diaValido(dia, mes, anio)
+        Si (mes < 1 O mes > 12)
+            Retornar Falso
+        
+        Definir arreglo diasPorMes = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31}
+
+        Si (mes = 2 Y esBisiesto(anio) = Verdadero)
+            diasPorMes[1] = 29
+        
+        Si (dia >= 1 Y dia <= diasPorMes[mes - 1])
+            Retornar Verdadero
+        Sino
+            Retornar Falso
+    Fin
+
+    Definir funcion mesValido(mes)
+        Definir arreglo meses = {"Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", 
+                                "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"}
+
+        Para i desde 0 hasta 11 hacer
+            Si meses[i] = mes
+                Retornar Verdadero
+        Fin Para
+
+        Retornar Falso
+    Fin
+
+    Definir funcion obtenerNumeroMes(mes)
+        Definir arreglo meses = {"Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", 
+                                "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"}
+
+        Para i desde 0 hasta 11 hacer
+            Si meses[i] = mes
+                Retornar i + 1
+        Fin Para
+
+        Retornar -1
+    Fin
+
+    Definir funcion anioValido(anio)
+        Si (anio > 0)
+            Retornar Verdadero
+        Sino
+            Retornar Falso
+    Fin
+
+    // Inicio del programa principal
+    Definir dia, anio, fechaValida
+    Definir mes
+
+    Hacer
+        Imprimir "Digite el día, mes y año en ese orden separados por un espacio"
+        Leer dia, mes, anio
+
+        Si (diaValido(dia, obtenerNumeroMes(mes), anio) Y mesValido(mes) Y anioValido(anio))
+            fechaValida = Verdadero
+            Imprimir "La fecha es válida."
+        Sino
+            fechaValida = Falso
+            Imprimir "La fecha es inválida."
+    Mientras (fechaValida = Falso)
+
+Fin

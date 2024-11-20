@@ -1,0 +1,19 @@
+
+    Elabora un programa que reciba 
+    como entrada un monto en dólares (USD) 
+    y devuelva la cantidad equivalente en pesos mexicanos (MXN)
+
+    MOISES MEDINA PORRAS
+
+
+Inicio
+    precioDolar ← 20.3
+    pesosConvertidos ← 0
+
+    Escribir "Escribe los dólares a convertir a pesos: "
+    Leer numeroDolares
+
+    pesosConvertidos ← precioDolar * numeroDolares
+
+    Escribir "La conversión de dólar (USD) a pesos (MXN) es ", pesosConvertidos
+Fin

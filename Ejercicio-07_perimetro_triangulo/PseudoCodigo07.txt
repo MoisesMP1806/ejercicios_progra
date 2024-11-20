@@ -1,0 +1,43 @@
+
+    Elabora programa que calcule el perímetro de un triángulo. El programa preguntará al usuario el tipo de triángulo 
+    (equilátero, isósceles o escaleno) y le pedirá las entradas necesarias para realizar el cálculo necesario.
+    MOISES MEDINA PORRAS
+
+Inicio
+    Escribir "Digita el tipo de triángulo (equilatero, isosceles, escaleno): "
+    Leer tipoTriangulo
+
+    Si tipoTriangulo == "equilatero" Entonces
+        ladoTrianguloEq ← 0
+        Escribir "Digita el lado del triángulo equilátero: "
+        Leer ladoTrianguloEq
+        perimetroEquilatero ← ladoTrianguloEq * 3
+        Escribir "El perímetro del triángulo equilátero es: ", perimetroEquilatero
+
+    Sino Si tipoTriangulo == "isosceles" Entonces
+        ladoTrianguloA ← 0
+        ladoTrianguloB ← 0
+        Escribir "Digita el lado igual del triángulo isósceles: "
+        Leer ladoTrianguloA
+        Escribir "Digita el otro lado del triángulo isósceles: "
+        Leer ladoTrianguloB
+        perimetroIsosceles ← (2 * ladoTrianguloA) + ladoTrianguloB
+        Escribir "El perímetro del triángulo isósceles es: ", perimetroIsosceles
+
+    Sino Si tipoTriangulo == "escaleno" Entonces
+        ladoTrianguloA ← 0
+        ladoTrianguloB ← 0
+        ladoTrianguloC ← 0
+        Escribir "Digita el lado A del triángulo escaleno: "
+        Leer ladoTrianguloA
+        Escribir "Digita el lado B del triángulo escaleno: "
+        Leer ladoTrianguloB
+        Escribir "Digita el lado C del triángulo escaleno: "
+        Leer ladoTrianguloC
+        perimetroTrianguloEscaleno ← ladoTrianguloA + ladoTrianguloB + ladoTrianguloC
+        Escribir "El perímetro del triángulo escaleno es: ", perimetroTrianguloEscaleno
+
+    Sino
+        Escribir "No has digitado un tipo de triángulo correcto"
+    FinSi
+Fin
